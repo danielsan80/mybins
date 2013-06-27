@@ -1,5 +1,5 @@
 <?php
-copy('/etc/hosts', __DIR__.'/../backup/hosts/hosts_'.date('Y-m-d_H-i-s'));
+copy('/etc/hosts', __DIR__.'/../backup/hosts/hosts_'.@date('Y-m-d_H-i-s'));
 
 $hosts = file_get_contents('/etc/hosts');
 
