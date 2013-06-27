@@ -1,2 +1,2 @@
-sudo php ~/bin/php/enhost.php $1
+sudo php ~/bin/php/endishost.php $1 enable
 

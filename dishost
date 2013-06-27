@@ -1,2 +1,2 @@
-php php/dishost.php $1
+sudo php ~/bin/php/endishost.php $1 disable
 
