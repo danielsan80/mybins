@@ -4,8 +4,8 @@ copy('/etc/hosts', __DIR__.'/../backup/hosts/hosts_'.date('Y-m-d_H-i-s'));
 $hosts = file_get_contents('/etc/hosts');
 
 $mode = 'enable';
-if (isset($argv[2])) {
-    switch($argv[2]) {
+if (isset($argv[1])) {
+    switch($argv[1]) {
         case'enable':
             $mode = 'enable';
             break;
@@ -18,19 +18,19 @@ if (isset($argv[2])) {
     }
 }
 
-if (!isset($argv[1])) {
+if (!isset($argv[2])) {
     echo 'Specify the block name, please'."\n";
     die();
 }
 
-$name= $argv[1];
+$name= $argv[2];
 
 $pattern = '/(#[ ]?block '.$name.')(?P<content>[.\s\w#]*)(#[ ]?endblock)/';
 
 
 preg_match($pattern, $hosts, $matches);
 if (!isset($matches['content'])) {
-    echo 'The block "'.$name.'" doesn\'t exist\n"';
+    echo 'The block "'.$name.'" doesn\'t exist'."\n";
     die();
 }
 

@@ -1,2 +1,2 @@
-sudo php ~/bin/php/endishost.php $1 disable
+sudo php ~/bin/php/endishost.php disable $1
 
