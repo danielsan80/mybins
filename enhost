@@ -1,0 +1,2 @@
+sudo php ~/bin/php/enhost.php $1
+

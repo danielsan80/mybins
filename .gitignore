@@ -1,0 +1,12 @@
+/nbproject
+.rsync_cache
+.project
+
+/backup/*
+
+*~
+
+!backup/hosts/.gitkeep
+!*.gitkeep
+
+

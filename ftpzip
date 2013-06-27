@@ -1,0 +1,6 @@
+#!/bin/sh
+list=`git diff $1 $2 --name-only`
+
+for i in $list; do
+    zip diff.zip $i
+done;
