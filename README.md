@@ -15,8 +15,12 @@ Open */etc/hosts* and create some blocks:
 
 ``
   ...
+
   # block something
+
   127.0.0.1       something.it www.something.it
+
   # endblock
+
   ...
 ``
